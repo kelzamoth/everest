@@ -93,22 +93,116 @@
         </div>
         <div class="tour">
             <div id="carousel" class="carousel">
-                <button class="arrow prev">⇦</button>
                 <div class="gallery">
                     <ul class="images">
-                        <li><img src="https://ru.js.cx/carousel/1.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/2.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/3.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/4.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/5.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/6.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/7.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/8.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/9.png"></li>
-                        <li><img src="https://ru.js.cx/carousel/10.png"></li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount1.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Россия</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Эльбрус</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>4506m</div>
+                                        <div>12 Дней</div>
+                                        <div>от 45 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Средний уровень</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount2.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Бразилия</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Килиманджаро</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>4596m</div>
+                                        <div>32 Дней</div>
+                                        <div>от 30 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Лёгкий уровень</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount3.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Россия</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Эльбрус</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>4506m</div>
+                                        <div>12 Дней</div>
+                                        <div>от 45 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Средний уровень</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount1.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Россия</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Эльбрус</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>4506m</div>
+                                        <div>12 Дней</div>
+                                        <div>от 45 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Лёгкий уровень</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount4.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Эквадор</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Джамалунгма</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>8806m</div>
+                                        <div>18 Дней</div>
+                                        <div>от 46 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Сложный уровень</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="image-block" style="background: url('img/mount5.jpg') no-repeat;">
+                                <div class="image-text__top">
+                                    <img src="img/icon_geo.png" width="13px" height="16px">
+                                    <div>Перу</div>
+                                </div>
+                                <div class="image-text__mount">
+                                    <div>Папуанта</div>
+                                    <div class="image-text__mount-inf">
+                                        <div>8506m</div>
+                                        <div>15 Дней</div>
+                                        <div>от 23 000 руб.</div>
+                                    </div>
+                                    <div class="image-text__mount-lev">Сложный уровень</div>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <button class="arrow next">⇨</button>
+                <div class="gallery__arrow countainer">
+                    <button class="prev"></button>
+                    <button class="next"></button>
+                </div>
             </div>
 
         </div>
@@ -250,7 +344,6 @@
                                 за неделю до путешествия!</p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -342,15 +435,15 @@
     </footer>
     <script>
         /* этот код помечает картинки, для удобства разработки */
-        let i = 1;
-        for (let li of carousel.querySelectorAll('li')) {
-            li.style.position = 'relative';
-            li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
-            i++;
-        }
+        // let i = 1;
+        // for (let li of carousel.querySelectorAll('li')) {
+        //     li.style.position = 'relative';
+        //     li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+        //     i++;
+        // }
 
         /* конфигурация */
-        let width = 130; // ширина картинки
+        let width = 400; // ширина картинки
         let count = 1; // видимое количество изображений
 
         let list = carousel.querySelector('ul');
@@ -370,9 +463,11 @@
             // сдвиг вправо
             position -= width * count;
             // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-            position = Math.max(position, -width * (listElems.length - count));
+            position = Math.max(position, -width * (listElems.length - count - 2));
             list.style.marginLeft = position + 'px';
+            console.log(position, -width * (listElems.length - count))
         };
+
     </script>
 </body>
 

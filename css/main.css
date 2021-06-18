@@ -2,6 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #061B28;
+    overflow-x: hidden;
 }
 
 ul, li {
@@ -9,21 +10,27 @@ ul, li {
     padding: 0;
     margin: 0;
 }
+
 p {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
+
 h1 {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     margin: 0;
 }
-h2 , h3 {
+
+h2, h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
     font-size: 52px;
     margin: 0;
 }
+
 .logo-text {
     font-family: 'Oswald', sans-serif;
     font-weight: 600;
@@ -127,14 +134,17 @@ h2 , h3 {
     gap: 0px;
     background: url("../img/map.png") no-repeat center right;
 }
+
 .map__title {
     max-width: 480px;
     color: #061B28;
     margin-bottom: 50px;
 }
+
 .map__title h2 {
     font-size: 52px;
 }
+
 .map__description {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -142,62 +152,112 @@ h2 , h3 {
     color: #061B28;
     max-width: 350px;
 }
+
 .map__description p {
     margin-bottom: 20px;
 }
+
 .carousel {
     position: relative;
-    width: 398px;
     padding: 10px 40px;
-    border: 1px solid #CCC;
-    border-radius: 15px;
-    background: #eee;
-  }
-  
-  .carousel img {
-    width: 130px;
-    height: 130px;
-    /* делаем этот элемент блочным, чтобы убрать лишнее пространство вокруг картинок */
-    display: block;
-  }
-  
-  .arrow {
+}
+
+.image-block {
+    width: 370px;
+    height: 326px;
+    position: relative;
+    z-index: 1;
+}
+.image-block::after {
+    content: "";
     position: absolute;
-    top: 60px;
-    padding: 0;
-    background: #ddd;
-    border-radius: 15px;
-    border: 1px solid gray;
-    font-size: 24px;
-    line-height: 24px;
-    color: #444;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.651);
+  }
+
+.image-text__top {
+    display: grid;
+    grid-template-columns: 15px auto;
+    gap: 8px;
+    font-size: 16px;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 100px;
+    z-index: 10;
+    position: relative;
+}
+
+.image-text__mount {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 28px 21px 21px;
+    gap: 15px;
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding-left: 25px;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+
+.image-text__mount-inf {
+    display: grid;
+    grid-template-columns: 70px 100px auto;
+    grid-template-rows: 21px;
+    gap: 1px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.image-text__mount-lev {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.gallery__arrow {
+    display: flex;
+    justify-content: flex-end;
+    width: 1170px;
+    margin: 40px auto 130px;
+}
+
+.next {
+    background: #E6E8EA url("../img/next.png") no-repeat center center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
     display: block;
-  }
-  
-  .arrow:focus {
-    outline: none;
-  }
-  
-  .arrow:hover {
-    background: #ccc;
+    border: none;
+}
+
+.prev {
+    background: #E6E8EA url("../img/prev.png") no-repeat center center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: block;
+    border: none;
+    margin-right: 25px;
+}
+
+.gallery__arrow:hover {
     cursor: pointer;
-  }
-  
-  .prev {
-    left: 7px;
-  }
-  
-  .next {
-    right: 7px;
-  }
-  
-  .gallery {
-    width: 390px;
+}
+
+.gallery {
+    width: 1170px;
     overflow: hidden;
-  }
-  
-  .gallery ul {
-    height: 130px;
+    margin: 0 auto;
+}
+
+.gallery ul {
     width: 9999px;
     margin: 0;
     padding: 0;
@@ -206,24 +266,27 @@ h2 , h3 {
     /* удаляем пустое пространство между элементами li, у которых установлен inline-block */
     /* http://davidwalsh.name/remove-whitespace-inline-block */
     font-size: 0;
-  }
-  
-  .gallery li {
+}
+
+.gallery li {
     display: inline-block;
-  }
+    padding-right: 30px;
+}
+
 .price-list {
     background: top / 100% url('../img/Rectangle\ 9.jpg') no-repeat;
     padding-bottom: 100px;
     color: #FCFCFC;
 }
-.price-list__main {
-    
-}
+
+.price-list__main {}
+
 .price-list__title {
     font-size: 52px;
     text-align: center;
     margin-top: 100px;
 }
+
 .price-list__text {
     text-align: center;
     max-width: 240px;
@@ -231,14 +294,15 @@ h2 , h3 {
     font-weight: 400;
     margin: 25px auto 60px;
 }
+
 .price-list__table {
-    display: grid; 
-    grid-template-rows: 31px 66px 66px 66px 66px; 
-    gap: 0px 0px; 
+    display: grid;
+    grid-template-rows: 31px 66px 66px 66px 66px;
+    gap: 0px 0px;
     width: 830px;
     margin: 0 auto;
-    
 }
+
 .price-list__table__top-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -249,6 +313,7 @@ h2 , h3 {
     font-size: 18px;
     align-items: top;
 }
+
 .price-list__table-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -258,16 +323,20 @@ h2 , h3 {
     font-size: 22px;
     align-items: center;
 }
+
 .price-list__table-item {
     text-align: center;
 }
+
 .price-list__anchor-margin {
     margin: 60px auto 0;
 }
+
 .blog {
     color: #061B28;
     margin-bottom: 140px;
 }
+
 .blog-text {
     font-size: 52px;
     text-align: center;
@@ -279,28 +348,31 @@ h2 , h3 {
     grid-template-columns: 400px 1fr;
     gap: 70px;
 }
+
 .blog-news__col {
     display: grid;
     grid-template-rows: repeat(5, 130px) 0fr;
 }
 
 .blog-news__col-item {
-    border-bottom:  2px solid #45545E;
+    border-bottom: 2px solid #45545E;
     padding: 0 30px;
     max-width: 400px;
 }
+
 .blog-news__col-item:hover {
     background-color: #061B28;
     color: #FCFCFC;
 }
+
 .blog-news__col-item__data {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #7E8386;
     margin: 27px 0 14px;
-
 }
+
 .blog-news__col-item__text {
     max-width: 350px;
     font-family: 'Roboto', sans-serif;
@@ -312,7 +384,7 @@ h2 , h3 {
 .blog-news__col-item__button {
     height: 50px;
     width: 400px;
-    background-color: #EC5118; 
+    background-color: #EC5118;
     font-size: 16px;
     color: #FCFCFC;
     border: none;
@@ -326,6 +398,7 @@ h2 , h3 {
     font-size: 22px;
     margin-bottom: 25px;
 }
+
 .blog-news__page-text {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -333,17 +406,19 @@ h2 , h3 {
     margin-bottom: 10px;
     max-width: 680px;
 }
+
 .blog-news__page-text p {
     margin-bottom: 10px;
     line-height: 24px;
 }
-.form {
-    
-}
+
+.form {}
+
 .form {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .form-blank {
     background: #061B28;
     color: #FCFCFC;
@@ -353,25 +428,27 @@ h2 , h3 {
 .form-blank__title {
     margin-bottom: 40px;
 }
+
 .form-blank__text {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 18px;
     margin-bottom: 40px;
 }
+
 .form-input {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
 }
+
 .form-input__text {
     margin-bottom: 35px;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 16px;
     border-bottom: 2px solid #7E8386;
-
-
 }
+
 .form-input__text input {
     background-color: #061B28;
     outline: none;
@@ -379,93 +456,109 @@ h2 , h3 {
     font-size: 16px;
     border: none;
 }
+
 .form-img {
-    background: url("../img/Rectangle 13.jpg") no-repeat center right;
+    background: url("../img/mount5.jpg") no-repeat center right;
     background-size: cover;
 }
+
 .form-button__item {
     height: 50px;
     width: 488px;
-    background-color: #EC5118; 
+    background-color: #EC5118;
     font-size: 16px;
     color: #FCFCFC;
     border: none;
     margin-top: 10px;
     cursor: pointer;
 }
+
 .form-blank__sug {
     font-size: 14px;
     margin-top: 25px;
     font-weight: 400;
 }
+
 .contacts {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 140px;
     margin-bottom: 140px;
 }
+
 .contacts-map {
     background: url("../img/Rectangle 26.png") no-repeat center right;
     background-size: cover;
 }
+
 .contacts-info {
     margin-left: 70px;
     line-height: 1;
-    
 }
+
 .contacts-info h3 {
     line-height: 100%;
     margin-bottom: 60px;
 }
+
 .contacts-adress {
     margin-bottom: 40px;
 }
+
 .contacts-tel {
     margin-bottom: 40px;
 }
+
 .contacts-mail {
     margin-bottom: 40px;
 }
+
 .contacts-adress p {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
 }
+
 .contacts-tel p {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
 }
+
 .contacts-mail p {
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
 }
+
 .contacts-soc p {
     margin-bottom: 20px;
 }
+
 .contacts-adress a {
     font-size: 22px;
     color: #061B28;
     text-decoration: none;
 }
+
 .contacts-tel a {
     font-size: 22px;
     color: #061B28;
     text-decoration: none;
 }
-.contacts-mail a{
+
+.contacts-mail a {
     font-size: 22px;
     color: #061B28;
     text-decoration: none;
 }
 
-.contacts-soc__in  {
+.contacts-soc__in {
     display: flex;
     justify-content: space-between;
     width: 120px;
-
 }
+
 .contacts-soc__in a {
     display: block;
     width: 30px;
@@ -475,21 +568,23 @@ h2 , h3 {
 .contacts-soc__f {
     background: url('../img/Vector\ \(2\).png') no-repeat center center;
 }
+
 .contacts-soc__ins {
     background: url("../img/Vector\ \(1\).png") no-repeat center center;
 }
+
 .contacts-soc__tw {
     background: url("../img/Vector.png") no-repeat center center;
 }
+
 .footer {
-    background-color: #061B28 ;
+    background-color: #061B28;
     text-align: center;
     line-height: 100px;
-
 }
+
 .footer-info {
     font-size: 14px;
     color: #FCFCFC;
     font-weight: 400;
-
 }
